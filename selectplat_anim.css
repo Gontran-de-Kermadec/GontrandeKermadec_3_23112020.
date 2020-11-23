@@ -1,0 +1,226 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+#container {
+  border: solid;
+  border-radius: 30px;
+  font-size: 2.5rem;
+  margin: 20px;
+  position: relative;
+  overflow: hidden;
+  height: 150px;
+}
+
+#container:hover #check #motion {
+  -webkit-transform: translateX(-190%);
+          transform: translateX(-190%);
+}
+
+#container:hover #plat-info {
+  width: 88%;
+}
+
+#container:hover #check .fa-check-circle {
+  /*transform: rotate(360deg);*/
+  -webkit-animation: rotate .5s ease;
+          animation: rotate .5s ease;
+}
+
+#container #plat-info {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #fff;
+  -webkit-transition: .5s all ease;
+  transition: .5s all ease;
+  padding: 20px 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#container #plat-info #plat {
+  overflow: hidden;
+}
+
+#container #plat-info #plat h3, #container #plat-info p {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#container #plat-info #plat h3 {
+  margin-bottom: 5px;
+}
+
+#container #plat-info #prix {
+  margin-right: 30px;
+}
+
+#container #plat-info #prix p {
+  margin-top: 90%;
+}
+
+#container #check {
+  background-color: aqua;
+  position: relative;
+  height: 100%;
+}
+
+#container #check #motion {
+  position: absolute;
+  right: -40px;
+  top: 55px;
+  -webkit-transition: .5s all ease;
+  transition: .5s all ease;
+}
+
+#container #check #motion .fa-check-circle {
+  color: white;
+  /*transition: transform 0.5s;*/
+}
+
+@-webkit-keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotate {
+  0% {
+    -webkit-transform: rotate(0);
+            transform: rotate(0);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+/*#txt {
+    border: solid;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis; 
+    display: flex;
+    justify-content: space-between;
+    #txt1 {
+        border: solid green;
+    }
+    #txt2 {
+        border: solid blue;
+    }  
+    p {
+        font-size: 1.3rem;
+    }
+}
+/*
+body {
+    #container {
+        border-radius: 15px;
+        position: relative;
+        width: 25%;
+        transform: translate(40%, 200px);
+        &:hover #notflex {
+            width: 80%; 
+         }
+        #notflex {
+            width: 100%;
+            background-color: white;
+            transition: 0.5s;
+        }
+        &:hover #check .fa-check-circle {
+            transform: rotate(360deg);
+        }
+        &:hover #check #motion {
+            transform: translateX(-170%);
+        }
+        #plat {
+            display: flex;
+            justify-content: space-between;
+        }
+        #check {
+            background-color: #99E2D0;
+            position: relative;
+            position: absolute;
+            top: 0;
+            right: 0;
+            border-radius: 0 13px 13px 0;
+            width: 10%;
+            height: 100%;
+            z-index: -10;
+            #motion {
+                position: absolute;
+                right: -20px;
+                top: 20%;
+                transition: .5s all ease;
+                .fa-check-circle {
+                    color: red;
+                    margin-top: 30%;
+                    transition: transform 0.5s;
+                }
+            }
+        }
+    }
+    #contenant {
+        position: absolute;
+        position: relative;
+        overflow: hidden;
+        left: 50%;
+        width: 10%;
+        height: 40px;
+        border-radius: 15px;
+        &:hover p {
+           width: 80%; 
+        }
+        &:hover #animation .fa-check-circle {
+            transform: rotate(360deg);
+        }
+        &:hover #animation #left {
+            transform: translateX(-160%);
+        }
+        #animation {
+            background-color: #99E2D0;
+            position: relative;
+            height: 100%;
+            width: 100%;
+            text-align: right;
+            #left {
+                position: absolute;
+                right: -20px;
+                top: 10px;
+                transition: transform 0.5s;
+            }
+            .fa-check-circle {
+                color: white;
+                transition: transform 0.5s;
+            }
+        }
+        p {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: red;
+            transition: 0.5s;
+        }
+    }
+}*/
+/*# sourceMappingURL=selectplat_anim.css.map */

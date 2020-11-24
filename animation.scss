@@ -82,3 +82,20 @@ body {
         opacity: 0;
     }
 }
+.fas {
+    margin: 10px;
+    border: solid;
+    display: flex;
+    align-items: center;
+    p {
+        position: relative;
+        &::before {
+            content: '1';
+            border: solid red;
+            position: absolute;
+            left: 0;
+            top: 50%;
+        }
+    }
+    
+}

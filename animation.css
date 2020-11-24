@@ -124,4 +124,27 @@ body p {
     opacity: 0;
   }
 }
+
+.fas {
+  margin: 10px;
+  border: solid;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.fas p {
+  position: relative;
+}
+
+.fas p::before {
+  content: '1';
+  border: solid red;
+  position: absolute;
+  left: 0;
+  top: 50%;
+}
 /*# sourceMappingURL=animation.css.map */

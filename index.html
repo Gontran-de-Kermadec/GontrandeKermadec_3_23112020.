@@ -8,8 +8,8 @@
     <script src="https://kit.fontawesome.com/604b429f95.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div id="loader-container">
-        <div id="loader">
+    <div class="loader-container">
+        <div class="loader-container__loader">
             <i class="fas fa-utensils"></i>
         </div>
         <p>Chargement...</p>
@@ -17,18 +17,38 @@
     <header>
         <img src="images/logo.png" alt="Ohmyfood logo">
     </header>
-    <section id="location">
-        <div id="city-location">
+    <section class="location">
+        <div class="location__city">
             <i class="fas fa-map-marker-alt"></i>
             <p>Paris, Belleville</p>
         </div>
-        <p>Réservez le menu qui vous convient</p>
-        <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
-        <div id="button">
-            <p>Explorer nos restaurants</p>
+        <div class="location__flexbox">
+            <div class="flexbox__infos">
+                <p><strong>Réservez le menu qui vous convient</strong></p>
+                <p class="p--fsize">Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
+            </div>
+            <div class="location__button">
+                <p>Explorer nos restaurants</p>
+            </div>
+        </div>
+    </section>
+    <section class="fonctionnement">
+        <h2>Fonctionnement</h2>
+        <div class="fonctionnemment__container">
+            <div class="fonctionnement__step fonctionnement--choix">
+                <i class="fas fa-mobile-alt"></i>
+                <p>Choisissez un restaurant</p>
+            </div>
+            <div class="fonctionnement__step fonctionnement--composition">
+                <i class="fas fa-list-ul"></i>
+                <p>Composez votre menu</p>
+            </div>
+            <div class="fonctionnement__step fonctionnement--degustation">
+                <i class="fas fa-store"></i>
+                <p>Dégustez au restaurant</p>
+            </div>
         </div>
     </section> 
-    <h3>Titre</h3>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum fugiat cum unde qui eligendi iste blanditiis dolore possimus voluptate harum, enim, soluta esse. Distinctio illo saepe quos possimus, consectetur aliquid.</p>
+
 </body>
 </html>

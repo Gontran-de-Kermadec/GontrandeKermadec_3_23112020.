@@ -116,6 +116,22 @@ header img {
   border-top: solid 2px #bababa;
 }
 
+.location__city {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: lightgray;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 10px 0;
+  margin-bottom: 40px;
+}
+
+.location__city i {
+  margin-right: 20px;
+}
+
 @media all and (min-width: 1000px) {
   .location__flexbox {
     display: -webkit-box;
@@ -138,22 +154,6 @@ header img {
   font-size: 1.2rem;
 }
 
-.location__city {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  background-color: lightgray;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding: 10px 0;
-  margin-bottom: 40px;
-}
-
-.location__city i {
-  margin-right: 20px;
-}
-
 .location__button {
   background: -webkit-gradient(linear, left top, left bottom, from(#FF79DA), to(#9356DC));
   background: linear-gradient(#FF79DA, #9356DC);
@@ -162,8 +162,8 @@ header img {
   -webkit-transform: translateX(33%);
           transform: translateX(33%);
   margin-top: 25px;
-  -webkit-box-shadow: 0px 3px 1em 1px #bababa;
-          box-shadow: 0px 3px 1em 1px #bababa;
+  -webkit-box-shadow: 0px 2px 0.5em 1px #bababa;
+          box-shadow: 0px 2px 0.5em 1px #bababa;
 }
 
 @media all and (min-width: 700px) {
@@ -188,12 +188,39 @@ header img {
   color: #fff;
 }
 
+.location__button:hover {
+  filter: brightness(1.1);
+  -webkit-filter: brightness(1.1);
+  -webkit-box-shadow: 0px 2px 0.5em 3px #5c5c5c;
+          box-shadow: 0px 2px 0.5em 3px #5c5c5c;
+}
+
 .fonctionnement {
   padding: 50px 15px;
 }
 
+@media all and (min-width: 700px) {
+  .fonctionnement__container {
+    width: 70%;
+    -webkit-transform: translateX(25%);
+            transform: translateX(25%);
+  }
+}
+
+@media all and (min-width: 1000px) {
+  .fonctionnement__container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    width: 100%;
+    -webkit-transform: inherit;
+            transform: inherit;
+  }
+}
+
 .fonctionnement__step {
-  border: solid;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -201,14 +228,36 @@ header img {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
-  margin: 10px 0;
+  margin: 25px 0;
   height: 60px;
   border-radius: 20px;
   position: relative;
+  -webkit-box-shadow: 0px 2px 0.5em 1px #bababa;
+          box-shadow: 0px 2px 0.5em 1px #bababa;
+  background-color: #e8e8e8;
 }
 
 .fonctionnement__step i, .fonctionnement__step p {
-  margin-left: 15px;
+  margin-left: 20px;
+}
+
+.fonctionnement__step i {
+  color: #737373;
+  padding-left: 10px;
+}
+
+.fonctionnement__step .i--color {
+  color: #9356DC;
+}
+
+.fonctionnement__step .p--fsize {
+  font-size: 1.3rem;
+}
+
+@media all and (min-width: 1000px) {
+  .fonctionnement__step {
+    margin: 25px 15px;
+  }
 }
 
 .fonctionnement .fonctionnement--choix::before {
@@ -219,6 +268,29 @@ header img {
   text-align: center;
   background-color: #9356DC;
   border-radius: 50%;
+  color: #fff;
+}
+
+.fonctionnement .fonctionnement--composition::before {
+  content: '2';
+  position: absolute;
+  left: -12px;
+  width: 19px;
+  text-align: center;
+  background-color: #9356DC;
+  border-radius: 50%;
+  color: #fff;
+}
+
+.fonctionnement .fonctionnement--degustation::before {
+  content: '3';
+  position: absolute;
+  left: -12px;
+  width: 19px;
+  text-align: center;
+  background-color: #9356DC;
+  border-radius: 50%;
+  color: #fff;
 }
 
 @-webkit-keyframes spin {
@@ -254,49 +326,30 @@ header img {
 @-webkit-keyframes fadeout {
   0% {
     opacity: 1;
+    z-index: 10;
   }
   90% {
     opacity: 1;
+    z-index: 10;
   }
   100% {
     opacity: 0;
+    z-index: -10;
   }
 }
 
 @keyframes fadeout {
   0% {
     opacity: 1;
+    z-index: 10;
   }
   90% {
     opacity: 1;
+    z-index: 10;
   }
   100% {
     opacity: 0;
+    z-index: -10;
   }
 }
-
-/*@media all and (min-width: 700px) {
-    header {
-        img {
-            width: 30%;
-            max-height: 40px;
-        }
-    }
-}
-@media all and (min-width: 1000px) {
-    header {
-        img {
-            width: 25%;
-            max-height: 50px;
-        }
-    }
-}
-@media all and (min-width: 1400px) {
-    header {
-        img {
-            width: 20%;
-            max-height: 70px;
-        }
-    }
-}*/
 /*# sourceMappingURL=style.css.map */

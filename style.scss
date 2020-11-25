@@ -5,7 +5,19 @@ $second-color: #FF79DA;
 $third-color: #99E2D0;
 $title: 'Shrikhand', cursive;
 $text: 'Roboto', sans-serif;
-
+//mixin
+@mixin shadow($color: #bababa, $size: 1px) {
+    box-shadow: 0px 2px 0.5em $size $color;
+}
+@mixin design-before-element {
+    position: absolute;
+    left: -12px;
+    width: 19px;
+    text-align: center;
+    background-color: $primary;
+    border-radius: 50%;
+    color: #fff;
+}
 * {
     margin: 0;
     padding: 0;
@@ -70,7 +82,7 @@ $text: 'Roboto', sans-serif;
         text-transform: uppercase;
         font-family: $text;
     }
-}
+} // fin loader
 header {
     text-align: center;
     img {
@@ -95,6 +107,16 @@ header {
     background-color: #e8e8e8;
     padding-bottom: 60px;
     border-top: solid 2px #bababa;
+    &__city {
+        display: flex;
+        background-color: lightgray;
+        justify-content: center;
+        padding: 10px 0;
+        margin-bottom: 40px;
+        i {
+            margin-right: 20px;
+        }
+    }
     &__flexbox {
         @media all and (min-width: 1000px) {
             display: flex;
@@ -111,23 +133,13 @@ header {
             font-size: 1.2rem;
         }
     }
-    &__city {
-        display: flex;
-        background-color: lightgray;
-        justify-content: center;
-        padding: 10px 0;
-        margin-bottom: 40px;
-        i {
-            margin-right: 20px;
-        }
-    }
     &__button {
         background: linear-gradient($second-color, $primary);
         width: 60%;
         border-radius: 20px;
         transform: translateX(33%);
         margin-top: 25px;
-        box-shadow: 0px 3px 1em 1px #bababa;
+        @include shadow;
         @media all and (min-width: 700px) {
             width: 40%;
             transform: translateX(78%); 
@@ -142,31 +154,69 @@ header {
             color: #fff;
         }
     }
+    &__button:hover {
+        filter: brightness(1.1);
+        -webkit-filter: brightness(1.1);
+        @include shadow(#5c5c5c, 3px);
+    }
 }
 .fonctionnement {
     padding: 50px 15px;
+    &__container {
+        @media all and (min-width: 700px) {
+            width: 70%;
+            transform: translateX(25%); 
+        }
+        @media all and (min-width: 1000px) {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            transform: inherit; 
+        }
+    }
     &__step {
-        border: solid;
         display: flex;
         align-items: center;
         width: 100%;
-        margin: 10px 0;
+        margin: 25px 0;
         height: 60px;
         border-radius: 20px;
         position: relative;
+        @include shadow;
+        background-color: #e8e8e8;
         i, p {
-            margin-left: 15px;
+            margin-left: 20px;
+        }
+        i {
+            color: #737373;
+            padding-left: 10px;
+        }
+        .i--color {
+            color: $primary;
+        }
+        .p--fsize {
+            font-size: 1.3rem;
+        }
+        @media all and (min-width: 1000px) {
+            margin: 25px 15px; 
         }
     }
     & .fonctionnement--choix {
         &::before {
             content: '1';
-            position: absolute;
-            left: -12px;
-            width: 19px;
-            text-align: center;
-            background-color: $primary;
-            border-radius: 50%;
+            @include design-before-element;
+        }
+    }
+    & .fonctionnement--composition {
+        &::before {
+            content: '2';
+            @include design-before-element;
+        }
+    }
+    & .fonctionnement--degustation {
+        &::before {
+            content: '3';
+            @include design-before-element;
         }
     }
 }
@@ -185,36 +235,14 @@ header {
 @keyframes fadeout {
     0% {
         opacity: 1;
+        z-index: 10;
     }
     90% {
         opacity: 1;
+        z-index: 10;
     }
     100% {
         opacity: 0;
+        z-index: -10;
     }
 }
-//media queries
-/*@media all and (min-width: 700px) {
-    header {
-        img {
-            width: 30%;
-            max-height: 40px;
-        }
-    }
-}
-@media all and (min-width: 1000px) {
-    header {
-        img {
-            width: 25%;
-            max-height: 50px;
-        }
-    }
-}
-@media all and (min-width: 1400px) {
-    header {
-        img {
-            width: 20%;
-            max-height: 70px;
-        }
-    }
-}*/

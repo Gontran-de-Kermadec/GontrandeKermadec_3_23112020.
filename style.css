@@ -8,6 +8,10 @@
   font-family: "Roboto", sans-serif;
 }
 
+h1 {
+  font-family: "Shrikhand", cursive;
+}
+
 .loader-container {
   position: absolute;
   width: 100%;
@@ -15,7 +19,7 @@
   text-align: center;
   -webkit-animation: fadeout 1s ease-in forwards;
           animation: fadeout 1s ease-in forwards;
-  background-color: white;
+  background-color: #fff;
   z-index: 10;
 }
 
@@ -111,7 +115,7 @@ header img {
 
 .location {
   text-align: center;
-  background-color: #e8e8e8;
+  background-color: #ededed;
   padding-bottom: 60px;
   border-top: solid 2px #bababa;
 }
@@ -120,7 +124,7 @@ header img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-color: lightgray;
+  background-color: #D3D3D3;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -191,8 +195,8 @@ header img {
 .location__button:hover {
   filter: brightness(1.1);
   -webkit-filter: brightness(1.1);
-  -webkit-box-shadow: 0px 2px 0.5em 3px #5c5c5c;
-          box-shadow: 0px 2px 0.5em 3px #5c5c5c;
+  -webkit-box-shadow: 0px 2px 0.5em 3px #878787;
+          box-shadow: 0px 2px 0.5em 3px #878787;
 }
 
 .fonctionnement {
@@ -234,7 +238,7 @@ header img {
   position: relative;
   -webkit-box-shadow: 0px 2px 0.5em 1px #bababa;
           box-shadow: 0px 2px 0.5em 1px #bababa;
-  background-color: #e8e8e8;
+  background-color: #ededed;
 }
 
 .fonctionnement__step i, .fonctionnement__step p {
@@ -242,7 +246,7 @@ header img {
 }
 
 .fonctionnement__step i {
-  color: #737373;
+  color: #878787;
   padding-left: 10px;
 }
 
@@ -291,6 +295,128 @@ header img {
   background-color: #9356DC;
   border-radius: 50%;
   color: #fff;
+}
+
+.restaurants {
+  background-color: #ededed;
+}
+
+.restaurants h2 {
+  padding: 40px 0 0 20px;
+}
+
+.restaurants__cards {
+  padding: 10px;
+}
+
+@media all and (min-width: 700px) {
+  .restaurants__cards {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+.restaurants__card {
+  text-decoration: none;
+  color: #000000;
+}
+
+@media all and (min-width: 700px) {
+  .restaurants__card {
+    width: 50%;
+  }
+}
+
+@media all and (min-width: 1400px) {
+  .restaurants__card {
+    width: 25%;
+  }
+}
+
+.restaurants .card {
+  background-color: #fff;
+  position: relative;
+  border-radius: 15px;
+  margin: 15px 10px;
+}
+
+.restaurants .card--nouveau::after {
+  content: "Nouveau";
+  border-radius: 2px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 5px 15px;
+  background-color: #99E2D0;
+  color: #1b6150;
+}
+
+.restaurants .card__img {
+  height: 170px;
+}
+
+.restaurants .card__img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 15px 15px 0 0;
+}
+
+.restaurants .card__txt-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 10px 15px;
+}
+
+.restaurants .card__txt-icon .txt p {
+  line-height: 1.5em;
+}
+
+.restaurants .card__txt-icon .icon {
+  position: relative;
+  top: 10px;
+}
+
+.restaurants .card__txt-icon svg {
+  width: 25px;
+  height: 20px;
+}
+
+.restaurants .card__txt-icon svg path {
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-transition: -webkit-transform .3s;
+  transition: -webkit-transform .3s;
+  transition: transform .3s;
+  transition: transform .3s, -webkit-transform .3s;
+}
+
+.restaurants .card__txt-icon .svg1 {
+  position: absolute;
+}
+
+.restaurants .card__txt-icon .svg1 path {
+  fill: transparent;
+}
+
+.restaurants .card__txt-icon .svg1:hover ~ .svg2 path {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.restaurants .card__txt-icon .svg2 path {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  fill: purple;
+  stroke: transparent;
 }
 
 @-webkit-keyframes spin {

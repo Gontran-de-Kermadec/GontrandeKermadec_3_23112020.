@@ -6,17 +6,53 @@
 }
 
 .menu {
-  border: solid;
+  border-radius: 15px;
   position: relative;
   top: 100px;
   left: 5%;
-  width: 100%;
+  width: 90%;
+  -webkit-box-shadow: 0 0 1px gray;
+          box-shadow: 0 0 1px gray;
+}
+
+.menu::after {
+  content: "Nouveau";
+  border-radius: 2px;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 5px 15px;
+  background-color: mediumaquamarine;
+  color: green;
 }
 
 .img {
-  overflow: hidden;
   width: 100%;
-  height: 100px;
+  height: 200px;
+}
+
+.img img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  border-radius: 15px 15px 0 0;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 15px;
+}
+
+.icon {
+  position: relative;
 }
 
 svg {
@@ -35,8 +71,8 @@ svg path {
 
 .svg2 {
   position: relative;
-  top: 300px;
-  left: 40%;
+  top: 0;
+  left: 0;
 }
 
 .svg2 path {
@@ -50,8 +86,8 @@ svg path {
 
 .svg3 {
   position: absolute;
-  top: 300px;
-  left: 40%;
+  top: 0;
+  left: 0;
   z-index: -1;
 }
 
@@ -60,6 +96,14 @@ svg path {
           transform: scale(0);
   fill: purple;
   stroke: transparent;
+}
+
+.clair {
+  color: red;
+}
+
+.fonce {
+  color: #990000;
 }
 
 /*.svg1 {

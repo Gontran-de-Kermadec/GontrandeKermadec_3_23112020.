@@ -5,16 +5,43 @@
     box-sizing: border-box;
 }
 .menu {
-    border: solid;
+    border-radius: 15px;
     position: relative;
     top: 100px;
     left: 5%;
-    width: 100%;
+    width: 90%;
+    box-shadow: 0 0 1px gray;
+}
+.menu::after {
+    content: "Nouveau";
+    border-radius: 2px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px 15px;
+    background-color: mediumaquamarine;
+    color: green;
+    //font-size: 1.2rem;
 }
 .img {
-    overflow: hidden;
     width: 100%;
-    height: 100px;
+    height: 200px;
+    //border-radius: 15px;
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 15px 15px 0 0;
+    }    
+}
+.flex {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+}
+.icon {
+    position: relative;
 }
 svg {
     width: 35px;
@@ -28,8 +55,8 @@ svg {
 }
 .svg2 {
     position: relative;
-    top: 300px;
-    left: 40%;
+    top: 0;
+    left: 0;
     path {
         fill: transparent;
     }
@@ -41,14 +68,20 @@ svg {
 }
 .svg3 {
     position: absolute;
-    top: 300px;
-    left: 40%;
+    top: 0;
+    left: 0;
     z-index: -1;
     path {
         transform: scale(0);
         fill: purple;
         stroke: transparent;
     }
+}
+.clair {
+    color: red;
+}
+.fonce {
+    color: darken($color: red, $amount: 20%);
 }
 /*.svg1 {
     position: relative;

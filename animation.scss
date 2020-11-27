@@ -4,107 +4,51 @@
     padding: 0;
     box-sizing: border-box;
 }
-.menu {
-    border-radius: 15px;
-    position: relative;
-    top: 100px;
-    left: 5%;
-    width: 90%;
-    box-shadow: 0 0 1px gray;
+div {
+    width: 80%;
+    height: 50px;
+    margin: 20px;
+    background-color: lawngreen;
+    border: solid;
 }
-.menu::after {
-    content: "Nouveau";
-    border-radius: 2px;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    padding: 5px 15px;
-    background-color: mediumaquamarine;
-    color: green;
-    //font-size: 1.2rem;
+#div1 {
+    animation: fadein 1s linear forwards;
+    margin-top: 50px;
 }
-.img {
-    width: 100%;
-    height: 200px;
-    //border-radius: 15px;
-    img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: center;
-        border-radius: 15px 15px 0 0;
-    }    
+#div2 {
+    animation: fadein 1.2s linear /*cubic-bezier(0, 0, 0.63, 0.95)*/forwards;
 }
-.flex {
-    display: flex;
-    justify-content: space-between;
-    padding: 15px;
+#div3 {
+    animation: fadein 1.4s linear/*cubic-bezier(0, 0, 0.63, 0.95)*/ forwards;
 }
-.icon {
-    position: relative;
+#div4 {
+    animation: fadein 1.6s linear/*cubic-bezier(0, 0, 0.63, 0.95)*/ forwards;
+    //animation-delay: 3s;
 }
-svg {
-    width: 35px;
-    height: 30px;
-    path {
-        //fill:transparent;
-        transform-origin: center;
-        //transform: scale(0.5);
-        transition: transform .3s;
+@keyframes fadein {
+    0% {
+        opacity: 0;
+        transform: translateY(0);
+    }
+    25%{
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    50%{
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    75%{
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    // 80% {
+    //     opacity: 0.6;
+    // }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-40px);
     }
 }
-.svg2 {
-    position: relative;
-    top: 0;
-    left: 0;
-    path {
-        fill: transparent;
-    }
-}
-.svg2:hover ~ .svg3 {
-        path {
-            transform: scale(1);
-    }
-}
-.svg3 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    path {
-        transform: scale(0);
-        fill: purple;
-        stroke: transparent;
-    }
-}
-.clair {
-    color: red;
-}
-.fonce {
-    color: darken($color: red, $amount: 20%);
-}
-/*.svg1 {
-    position: relative;
-    width: 100px;
-    height: 100px;
-    path {
-        fill: transparent;
-    }
-}
-.svg2 {
-    position: absolute;
-    left: 0;
-    path {
-        transform: scale(0.1);
-    }
-    path:hover {
-        transform: scale(0.8);
-        fill: yellow;
-        stroke: red;
-    }
-}
-.svg3 {
-    width: 100px;
-    height: 100px;
-    
-}*/

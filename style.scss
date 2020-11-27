@@ -25,8 +25,11 @@ $text: 'Roboto', sans-serif;
     box-sizing: border-box;
     font-family: $text;
 }
-h1 {
+h1, h3 {
     font-family: $title;
+}
+a {
+    text-decoration: none;
 }
 //loader
 .loader-container {
@@ -89,6 +92,15 @@ h1 {
 } // fin loader
 header {
     text-align: center;
+    position: relative;
+    a {
+        color: #000000;
+    }
+    .fa-arrow-left {
+        position: absolute;
+        left: 20px;
+        bottom: 35%;
+    }
     img {
         width: 45%;
         margin: 10px;
@@ -226,6 +238,7 @@ header {
 }
 .restaurants {
     background-color: lighten($color: $fourth-color, $amount: 10%);
+    padding-bottom: 25px;
     h2 {
         padding: 40px 0 0 20px;
     }
@@ -237,7 +250,6 @@ header {
         }
     }
     &__card {
-        text-decoration: none;
         color: #000000;
         @media all and (min-width: 700px) {
             width: 50%;
@@ -251,7 +263,7 @@ header {
         position: relative;
         border-radius: 15px;
         margin: 15px 10px;
-        
+        @include shadow;
     }
     .card--nouveau {
         &::after {
@@ -311,11 +323,64 @@ header {
             // z-index: -1;
             path {
                 transform: scale(0);
-                fill: purple;
+                fill: $second-color;
                 stroke: transparent;
             }
         }
     }
+}
+footer {
+    color: #fff;
+    background-color: darken($color: $fourth-color, $amount: 60%);
+    padding: 20px;
+    h3, span {
+        font-weight: normal;
+    }
+    h3 {
+        margin-bottom: 15px;
+    }
+    .fa-utensils::before {
+        font-size: 0.8rem;
+    }
+    .fa-hands-helping::before {
+        font-size: 0.55rem;
+        @media all and (min-width: 700px) {
+            font-size: 0.8rem;
+        }
+    }
+    .footer__txt {
+        i {
+            line-height: 1.5rem;
+        }
+        span {
+            margin-left: 15px;
+            @media all and (min-width: 700px) {
+                margin-left: 5px;
+            }
+        }
+        a {
+            color: #fff;
+        }
+        p {
+            margin-bottom: 5px;
+            @media all and (min-width: 1000px) {
+                margin-bottom: 0;
+            }
+        }
+        br {
+            @media all and (min-width: 700px) {
+                display: none;
+            }    
+        }
+        @media all and (min-width: 700px) {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+    }
+}
+.footer--translate {
+    transform: translateY(-45px);
 }
 //animation
 @keyframes spin {
@@ -343,3 +408,189 @@ header {
         z-index: -10;
     }
 }
+//page menu
+.grande_image {
+    width: 100%;
+    object-fit: cover;
+}
+.menu {
+    background-color: lighten($color: $fourth-color, $amount: 10%);
+    border-radius: 40px 40px 0 0;
+    transform: translateY(-45px);
+    padding: 15px 0 60px 0;
+    &__titre-icon {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+        .icon {
+            position: relative;
+            top: 10px;
+        }
+        svg {
+            width: 25px;
+            height: 20px;
+            path {
+                transform-origin: center;
+               // transition: transform .3s;
+            }
+        }
+        .svg1 {
+            position: absolute;
+            path {
+                fill: transparent;
+            }
+        }
+        .svg1:hover ~ .svg2 {
+            path {
+                transform: scale(1);
+        }
+    }
+        .svg2 {
+            // position: absolute;
+            // top: 0;
+            // left: 0;
+            // z-index: -1;
+            path {
+                transform: scale(0);
+                fill: $second-color;
+                stroke: transparent;
+            }
+        }
+    }
+}
+//animation page menu
+.menu__plat {
+    margin: 15px 10px;
+    .firstp {
+        position: relative;
+        margin: 20px 0;
+    }
+    .firstp::after {
+        content: '';
+        position: absolute;
+        border: $third-color solid 1px;
+        width: 40px;
+        height: 0;
+        left: 0px;
+        //z-index: 10;
+        background: $third-color;
+        margin: 5px 0;
+    }
+}
+.menu__plat--flex {
+    margin-bottom: 35px;
+}
+.plat__card {
+    //border: solid;
+    border-radius: 20px;
+    font-size: 1rem;
+    margin: 10px 0;
+    position: relative;
+    overflow: hidden;
+    height: 70px;
+    //animation: fadein 1s linear forwards;
+    @include shadow;
+    &:hover .plat__check .motion {
+        transform: translateX(-67px);
+    }
+    &:hover .plat__info {
+        width: 80%; 
+     }
+    &:hover .plat__check .fa-check-circle {
+        /*transform: rotate(360deg);*/
+        animation: rotate .5s ease;
+    }
+    .plat__info {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        transition: .5s all ease;
+        padding: 15px 0 0 10px;
+        display: flex;
+        justify-content: space-between;
+        .plat {
+            overflow: hidden;
+        }
+        .plat h4, p {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .plat h4 {
+            margin-bottom: 5px;
+        }
+        .plat p {
+            font-size: 0.8rem;
+        }
+        .prix {
+            margin-right: 30px;
+            p {
+                margin-top: 80%;
+            }
+        }
+    }
+    .plat__check {
+        background-color: aqua;
+        position: relative;
+        height: 100%;
+        .motion {
+            position: absolute;
+            right: -45px;
+            top: 24px;
+            transition: .5s all ease;
+            .fa-check-circle {
+                color: white;
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
+.button--position {
+    text-align: center;
+    transform: translateX(50%);
+    width: 50%;
+}
+.menu__plat--fade1 {
+    animation: fadein 1s linear forwards;
+}
+.menu__plat--fade2 {
+    animation: fadein 1.2s linear forwards;
+}
+.menu__plat--fade3 {
+    animation: fadein 1.4s linear forwards;
+}
+@keyframes rotate {
+    0% {
+        transform: rotate(0);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}  
+@keyframes fadein {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    25%{
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    50%{
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    75%{
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0);
+    }
+} 

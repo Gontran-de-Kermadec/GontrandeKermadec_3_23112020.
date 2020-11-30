@@ -1,0 +1,69 @@
+.fonctionnement {
+    padding: 50px 15px;
+    background-color: #fff;
+    &__container {
+        @include tablette {
+            width: 70%;
+            transform: translateX(25%); 
+        }
+        @include desktop-s {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            transform: inherit; 
+        }
+    }
+    &__step {
+        display: flex;
+        position: relative;
+        align-items: center;
+        width: 100%;
+        margin: 25px 0;
+        height: 60px;
+        border-radius: 20px;
+        @include shadow;
+        background-color: lighten($color: $fourth-color, $amount: 10%);
+        &::before {
+            content: "";
+            position: absolute;
+            left: -12px;
+            width: 19px;
+            height: auto;
+            border-radius: 50%;
+            text-align: center;
+            background-color: #9356DC;
+            color: #fff;
+        }
+        i, p {
+            margin-left: 20px;
+        }
+        i {
+            color: darken($color: $fourth-color, $amount: 30%);
+            padding-left: 10px;
+        }
+        .i--color {
+            color: $primary;
+        }
+        .p--fsize {
+            font-size: 1.3rem;
+        }
+        @include desktop-s {
+            margin: 25px 15px; 
+        }
+    }
+    .fonctionnement--choix {
+        &::before {
+            content: '1';
+        }
+    }
+    .fonctionnement--composition {
+        &::before {
+            content: '2';
+        }
+    }
+    .fonctionnement--degustation {
+        &::before {
+            content: '3';
+        }
+    }
+}

@@ -1,0 +1,26 @@
+header {
+    text-align: center;
+    position: relative;
+    background-color: #fff;
+    .fa-arrow-left {
+        position: absolute;
+        left: 20px;
+        bottom: 35%;
+    }
+    img {
+        width: 45%;
+        margin: 10px;
+        @include tablette {
+            width: 30%;
+            max-height: 40px; 
+        }
+        @include desktop-s {
+            width: 25%;
+            max-height: 50px; 
+        }
+        @include desktop-l {
+            width: 20%;
+            max-height: 70px;
+        }
+    }
+}

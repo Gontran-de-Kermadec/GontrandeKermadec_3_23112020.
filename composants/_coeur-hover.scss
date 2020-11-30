@@ -1,0 +1,26 @@
+svg {
+    width: 25px;
+    height: 20px;
+    path {
+        transform-origin: center;
+        transition: transform .3s;
+    }
+}
+.svg1 {
+    position: absolute;
+    path {
+        fill: transparent;
+    }
+}
+.svg1:hover ~ .svg2 {
+    path {
+        transform: scale(1);
+    }
+}
+.svg2 {
+    path {
+        transform: scale(0);
+        fill: $second-color;
+        stroke: transparent;
+    }
+}

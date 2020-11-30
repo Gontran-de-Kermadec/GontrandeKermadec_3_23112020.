@@ -1,0 +1,169 @@
+.images {
+    height: 250px;
+    @include desktop-s {
+        height: 400px;
+    }
+    .grande_image {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}
+.menu {
+    background-color: lighten($color: $fourth-color, $amount: 10%);
+    border-radius: 40px 40px 0 0;
+    transform: translateY(-45px);
+    padding: 15px 0 30px 0;
+    &__titre-icon {
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+        @include desktop-s {
+            justify-content: center;
+        }
+        .icon {
+            position: relative;
+            top: 13px;
+            @include desktop-s {
+                left: 15px;
+            }
+        }
+    }
+}
+.menu__plat {
+    margin: 15px 10px;
+    .firstp {
+        position: relative;
+        margin: 20px 0;
+    }
+    .firstp::after {
+        content: '';
+        @include before-after-element(-position, 40px, -size);
+        border: $third-color solid 1px;
+        background: $third-color;
+        margin: 5px 0;
+    }
+    .firstp--margin1 {
+        @include desktop-s {
+            margin-left: 6.5%;
+        }
+    }
+    .firstp--margin2 {
+        @include desktop-s {
+            margin-left: 13%;
+        }
+    }
+}
+.menu__plat--flex {
+    margin-bottom: 35px;
+    @include tablette {
+        margin: 0 20px 35px 20px;
+    }
+    @include desktop-s {
+        display: flex;
+        margin: 0 0 20px 0;
+    }
+}
+.menu__plat--flex1 {
+    @include desktop-s {
+        justify-content: flex-start;
+    }
+}
+.menu__plat--flex2 {
+    justify-content: center;
+}
+.menu__plat--flex3 {
+    justify-content: flex-end;
+}
+.plat__card {
+    border-radius: 20px;
+    margin: 10px 0;
+    position: relative;
+    overflow: hidden;
+    height: 70px;
+    @include shadow;
+    &:hover .plat__check .motion {
+        transform: translateX(-67px);
+        @include desktop-s {
+            transform: translateX(-61px);
+        }
+        @include desktop-l {
+            transform: translateX(-65px);
+        }
+    }
+    &:hover .plat__info {
+        width: 80%; 
+        @include tablette {
+            width: 90%;
+        }
+        @include desktop-s {
+            width: 80%;
+        }
+        @include desktop-m {
+            width: 83.5%;
+        }
+     }
+    &:hover .plat__check .fa-check-circle {
+        animation: rotate .5s ease;
+    }
+    @include desktop-s {
+        width: 28%;
+        margin: 10px 5px;
+    }
+    .plat__info {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #fff;
+        transition: .5s all ease;
+        padding: 15px 0 0 10px;
+        display: flex;
+        justify-content: space-between;
+        .plat {
+            overflow: hidden;
+        }
+        .plat h4, p {
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .plat h4 {
+            margin-bottom: 5px;
+        }
+        .plat p {
+            font-size: 0.8rem;
+        }
+        .prix {
+            margin-right: 30px;
+            p {
+                margin-top: 80%;
+            }
+        }
+    }
+    .plat__check {
+        background-color: $third-color;
+        position: relative;
+        height: 100%;
+        .motion {
+            position: absolute;
+            right: -45px;
+            top: 24px;
+            transition: .5s all ease;
+            .fa-check-circle {
+                color: white;
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
+.menu__plat--fade1 {
+    animation: fadein 0.6s linear forwards;
+}
+.menu__plat--fade2 {
+    animation: fadein 0.8s linear forwards;
+}
+.menu__plat--fade3 {
+    animation: fadein 1s linear forwards;
+}

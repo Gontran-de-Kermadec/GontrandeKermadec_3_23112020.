@@ -1,0 +1,32 @@
+.location {
+    text-align: center;
+    background-color: lighten($color: $fourth-color, $amount: 10%);
+    padding-bottom: 60px;
+    border-top: solid 2px darken($color: $fourth-color, $amount: 10%);
+    &__city {
+        display: flex;
+        background-color: $fourth-color;
+        justify-content: center;
+        padding: 10px 0;
+        margin-bottom: 40px;
+        i {
+            margin-right: 20px;
+        }
+    }
+    &__flexbox {
+        @include desktop-s {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+    }
+    .flexbox__infos {
+        >p {
+            font-size: 1.5rem;
+            margin: 10px;
+        }
+        .p--fsize {
+            font-size: 1.2rem;
+        }
+    }
+}

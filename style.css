@@ -578,7 +578,7 @@ svg path {
 .svg2 path {
   -webkit-transform: scale(0);
           transform: scale(0);
-  fill: #FF79DA;
+  fill: url("#gradient");
   stroke: transparent;
 }
 

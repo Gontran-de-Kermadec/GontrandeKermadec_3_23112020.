@@ -8,6 +8,7 @@
     <script src="https://kit.fontawesome.com/604b429f95.js" crossorigin="anonymous"></script>
 </head>
 <body>
+<!--partie consacrée à l'en-tête des pages-->
     <header>
         <a href="index.html"><i class="fas fa-arrow-left"></i></a>
         <img src="images/logo.png" alt="Ohmyfood logo">
@@ -17,14 +18,21 @@
             <img class="grande_image" src="images/charonnegrand.jpg" alt="plat au restaurant">
         </div>
         <div class="menu">
+        <!--partie consacrée au titre et l'icone favori-->
             <div class="menu__titre-icon">
                 <h1>La note enchantée</h1>
                 <div class="icon">
-                    <svg data-prefix="fas" data-icon="heart" class="svg1" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path stroke="black" stroke-width="20" d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"></path></svg>
+                    <svg data-prefix="fas" data-icon="heart" class="svg1" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+                        <linearGradient id="gradient">
+                            <stop offset="5%"  stop-color="#FF79DA"/>
+                            <stop offset="70%" stop-color="#9356DC"/>
+                        </linearGradient>
+                        <path stroke="black" stroke-width="20" d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"></path></svg>
                     <svg data-prefix="fas" data-icon="heart" class="svg2" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path stroke="black" stroke-width="20" d="M462.3 62.6C407.5 15.9 326 24.3 275.7 76.2L256 96.5l-19.7-20.3C186.1 24.3 104.5 15.9 49.7 62.6c-62.8 53.6-66.1 149.8-9.9 207.9l193.5 199.8c12.5 12.9 32.8 12.9 45.3 0l193.5-199.8c56.3-58.1 53-154.3-9.8-207.9z"></path></svg>
                 </div>
             </div>
-            <section class="menu__plat entrees menu__plat--fade1">
+        <!--partie consacrée aux entrées proposées-->
+            <section class="menu__plat menu__plat--fade1">
                 <div class="firstp"><p>ENTRÉES</p></div>
                 <div class="menu__plat--flex menu__plat--flex1">
                     <div class="plat__card">
@@ -93,7 +101,8 @@
                     </div>
                 </div>
             </section>
-            <section class="menu__plat plats menu__plat--fade2">
+        <!--partie consacrée aux plats proposés-->
+            <section class="menu__plat menu__plat--fade2">
                 <div class="firstp firstp--margin1"><p>PLATS</p></div>
                 <div class="menu__plat--flex menu__plat--flex2">
                     <div class="plat__card">
@@ -146,7 +155,8 @@
                     </div> 
                 </div>
             </section>
-            <section class="menu__plat desserts menu__plat--fade3">
+        <!--partie consacrée aux desserts proposés-->
+            <section class="menu__plat menu__plat--fade3">
                 <div class="firstp firstp--margin2"><p>DESSERTS</p></div>
                 <div class="menu__plat--flex menu__plat--flex3">
                     <div class="plat__card">
@@ -199,11 +209,13 @@
                     </div> 
                 </div>
             </section>
+        <!--partie consacrée au bouton-->
             <div class="button button--position">
                 <p>Commander</p>
             </div>
         </div>
     </main>
+<!--partie consacrée au pied de page-->
     <footer>
         <h3>ohmyfood</h3>
         <div class="footer__txt">

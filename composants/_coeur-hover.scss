@@ -20,7 +20,7 @@ svg {
 .svg2 {
     path {
         transform: scale(0);
-        fill: $second-color;
+        fill: url('#gradient');
         stroke: transparent;
     }
 }

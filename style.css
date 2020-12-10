@@ -434,6 +434,12 @@ footer .footer__txt p {
   width: 80%;
 }
 
+@media all and (min-width: 500px) {
+  .plat__card:hover .plat__info {
+    width: 85%;
+  }
+}
+
 @media all and (min-width: 700px) {
   .plat__card:hover .plat__info {
     width: 90%;
@@ -523,7 +529,7 @@ footer .footer__txt p {
 }
 
 .plat__card .plat__check .motion .fa-check-circle {
-  color: white;
+  color: #fff;
   font-size: 1.5rem;
 }
 
@@ -634,7 +640,7 @@ svg path {
 }
 
 .loader-container {
-  position: absolute;
+  position: fixed;
   width: 100%;
   height: 100%;
   text-align: center;
@@ -739,8 +745,8 @@ svg path {
   }
 }
 
-.location .flexbox__infos > p {
-  font-size: 1.5rem;
+.location .flexbox__infos .h1--ffamily {
+  font-family: "Roboto", sans-serif;
   margin: 10px;
 }
 

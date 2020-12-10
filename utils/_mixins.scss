@@ -8,6 +8,11 @@
     height: $height-size;
     border-radius: $radius;
 }
+@mixin tablette-s {
+    @media all and (min-width: map-get($map: $breakpoints, $key: tablette-s)) {
+        @content;
+    }
+}
 @mixin tablette {
     @media all and (min-width: map-get($map: $breakpoints, $key: tablette) ) {
         @content;

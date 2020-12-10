@@ -21,8 +21,8 @@
         }
     }
     .flexbox__infos {
-        >p {
-            font-size: 1.5rem;
+        .h1--ffamily {
+            font-family: $text;
             margin: 10px;
         }
         .p--fsize {
